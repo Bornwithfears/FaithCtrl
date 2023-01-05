@@ -825,7 +825,7 @@ starlogo.TextSize = 22.000
 
 -- Scripts:
 
-local function YHHTNX_fake_script() -- PlayerCash.LocalScript 
+local function OPWX_fake_script() -- PlayerCash.LocalScript 
 	local script = Instance.new('LocalScript', PlayerCash)
 
 	local cash = game.Players.LocalPlayer.DataFolder.Currency.Value
@@ -842,8 +842,8 @@ local function YHHTNX_fake_script() -- PlayerCash.LocalScript
 	end
 	script.Parent.Text = "Cash: "..comma_value(cash)
 end
-coroutine.wrap(YHHTNX_fake_script)()
-local function LPSA_fake_script() -- Fps.LocalScript 
+coroutine.wrap(OPWX_fake_script)()
+local function EJDKMX_fake_script() -- Fps.LocalScript 
 	local script = Instance.new('LocalScript', Fps)
 
 	local RS = game:GetService("RunService")
@@ -858,8 +858,8 @@ local function LPSA_fake_script() -- Fps.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(LPSA_fake_script)()
-local function RRAMN_fake_script() -- FaithFrame.script test 
+coroutine.wrap(EJDKMX_fake_script)()
+local function YVJMYP_fake_script() -- FaithFrame.script test 
 	local script = Instance.new('LocalScript', FaithFrame)
 
 	----------------------------------------------------------------------------------------------------------------------------
@@ -900,11 +900,9 @@ local function RRAMN_fake_script() -- FaithFrame.script test
 	end)
 	script.Parent.PlayerImage.Image = content
 	script.Parent.Welcome.Text = "Welcome, "..player.DisplayName
-	if player:GetRankInGroup(tonumber(14146991)) ~= 255 then
-		script.Parent.user.Text = "@"..player.Name
-	elseif player:GetRankInGroup(tonumber(14146991)) == 255 then
-		script.Parent.user.Text = "@"..player.Name
-	elseif player:GetRankInGroup(tonumber(14146991)) == 3 then
+	if player:IsInGroup(14146991) then
+		print(nil)
+	else
 		script.Parent.user.Text = "@"..player.Name
 	end
 	----------------------------------------------------------------------------------------------------------------------------
@@ -966,8 +964,8 @@ local function RRAMN_fake_script() -- FaithFrame.script test
 	end)
 	----------------------------------------------------------------------------------------------------------------------------
 end
-coroutine.wrap(RRAMN_fake_script)()
-local function GFIO_fake_script() -- Frame.LocalScript 
+coroutine.wrap(YVJMYP_fake_script)()
+local function GVTFL_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Username = script.Parent.Customer
@@ -1020,8 +1018,8 @@ local function GFIO_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GFIO_fake_script)()
-local function KGTJLSK_fake_script() -- Admin.LocalScript 
+coroutine.wrap(GVTFL_fake_script)()
+local function PIHKYP_fake_script() -- Admin.LocalScript 
 	local script = Instance.new('LocalScript', Admin)
 
 	local button = script.Parent
@@ -1030,8 +1028,8 @@ local function KGTJLSK_fake_script() -- Admin.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-870.610046, -32.6492119, -654.12146, -0.999967456, 6.73676981e-09, 0.00807124563, 7.185605e-09, 1, 5.55801236e-08, -0.00807124563, 5.56363098e-08, -0.999967456)
 	end)
 end
-coroutine.wrap(KGTJLSK_fake_script)()
-local function TYHF_fake_script() -- Court.LocalScript 
+coroutine.wrap(PIHKYP_fake_script)()
+local function VNIQF_fake_script() -- Court.LocalScript 
 	local script = Instance.new('LocalScript', Court)
 
 	local button = script.Parent
@@ -1040,8 +1038,8 @@ local function TYHF_fake_script() -- Court.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-898.074036, 22.0798168, -482.705719, 0.0116940476, -9.68925846e-08, 0.999931633, -3.47399762e-08, 1, 9.73054881e-08, -0.999931633, -3.58754981e-08, 0.0116940476)
 	end)
 end
-coroutine.wrap(TYHF_fake_script)()
-local function AFPBAO_fake_script() -- Valut.LocalScript 
+coroutine.wrap(VNIQF_fake_script)()
+local function EJGM_fake_script() -- Valut.LocalScript 
 	local script = Instance.new('LocalScript', Valut)
 
 	local button = script.Parent
@@ -1050,8 +1048,8 @@ local function AFPBAO_fake_script() -- Valut.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-516.680176, 23.1926975, -285.770142, -0.0152463671, 1.09481697e-07, -0.999883771, -3.95787181e-09, 1, 1.09554769e-07, 0.999883771, 5.62772406e-09, -0.0152463671)
 	end)
 end
-coroutine.wrap(AFPBAO_fake_script)()
-local function NYDUSE_fake_script() -- Cage.LocalScript 
+coroutine.wrap(EJGM_fake_script)()
+local function IWUPKX_fake_script() -- Cage.LocalScript 
 	local script = Instance.new('LocalScript', Cage)
 
 	local button = script.Parent
@@ -1060,8 +1058,8 @@ local function NYDUSE_fake_script() -- Cage.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-798.375244, -39.6492119, -847.344849, -0.999482393, -4.08137595e-08, 0.0321713239, -4.2784059e-08, 1, -6.05555783e-08, -0.0321713239, -6.1900657e-08, -0.999482393)
 	end)
 end
-coroutine.wrap(NYDUSE_fake_script)()
-local function NRIS_fake_script() -- Club.LocalScript 
+coroutine.wrap(IWUPKX_fake_script)()
+local function XLAEBC_fake_script() -- Club.LocalScript 
 	local script = Instance.new('LocalScript', Club)
 
 	local button = script.Parent
@@ -1070,8 +1068,8 @@ local function NRIS_fake_script() -- Club.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-265.931396, 0.0313372314, -338.490204, 0.999943137, -3.41572637e-09, -0.0106624654, 2.60253774e-09, 1, -7.62803509e-08, 0.0106624654, 7.62482628e-08, 0.999943137)
 	end)
 end
-coroutine.wrap(NRIS_fake_script)()
-local function QQFHRJD_fake_script() -- Bank.LocalScript 
+coroutine.wrap(XLAEBC_fake_script)()
+local function IGAXAZ_fake_script() -- Bank.LocalScript 
 	local script = Instance.new('LocalScript', Bank)
 
 	local button = script.Parent
@@ -1080,8 +1078,8 @@ local function QQFHRJD_fake_script() -- Bank.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-375.226471, 21.2499943, -346.091797, -0.999974251, 1.13027268e-08, -0.00717510376, 1.06777058e-08, 1, 8.71479884e-08, 0.00717510376, 8.70691323e-08, -0.999974251)
 	end)
 end
-coroutine.wrap(QQFHRJD_fake_script)()
-local function LBXVIA_fake_script() -- Main2.LocalScript 
+coroutine.wrap(IGAXAZ_fake_script)()
+local function NIAGZ_fake_script() -- Main2.LocalScript 
 	local script = Instance.new('LocalScript', Main2)
 
 	local button = script.Parent
@@ -1092,8 +1090,8 @@ local function LBXVIA_fake_script() -- Main2.LocalScript
 		button2.Visible = false
 	end)
 end
-coroutine.wrap(LBXVIA_fake_script)()
-local function JUQFX_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(NIAGZ_fake_script)()
+local function QKFHFV_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local button = script.Parent.Tp
@@ -1151,20 +1149,20 @@ local function JUQFX_fake_script() -- Frame_2.LocalScript
 		end
 	end)
 end
-coroutine.wrap(JUQFX_fake_script)()
-local function PLPUYR_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(QKFHFV_fake_script)()
+local function YPMNNDQ_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	
 end
-coroutine.wrap(PLPUYR_fake_script)()
-local function CYEGJ_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(YPMNNDQ_fake_script)()
+local function LFWTF_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	
 end
-coroutine.wrap(CYEGJ_fake_script)()
-local function BIGNC_fake_script() -- Saver.LocalScript 
+coroutine.wrap(LFWTF_fake_script)()
+local function BVZP_fake_script() -- Saver.LocalScript 
 	local script = Instance.new('LocalScript', Saver)
 
 	-----------------------------------------------------------------------------------------
@@ -1187,8 +1185,8 @@ local function BIGNC_fake_script() -- Saver.LocalScript
 	end)
 	-----------------------------------------------------------------------------------------
 end
-coroutine.wrap(BIGNC_fake_script)()
-local function VEOS_fake_script() -- Home.LocalScript 
+coroutine.wrap(BVZP_fake_script)()
+local function QQPHZFG_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	local button = script.Parent
@@ -1208,8 +1206,8 @@ local function VEOS_fake_script() -- Home.LocalScript
 		frames.SaverFrame.Visible = false
 	end)
 end
-coroutine.wrap(VEOS_fake_script)()
-local function SKNGIBJ_fake_script() -- Tps.LocalScript 
+coroutine.wrap(QQPHZFG_fake_script)()
+local function XEKFDAC_fake_script() -- Tps.LocalScript 
 	local script = Instance.new('LocalScript', Tps)
 
 	local button = script.Parent
@@ -1229,8 +1227,8 @@ local function SKNGIBJ_fake_script() -- Tps.LocalScript
 		frames.SaverFrame.Visible = true
 	end)
 end
-coroutine.wrap(SKNGIBJ_fake_script)()
-local function DYPQH_fake_script() -- Main.LocalScript 
+coroutine.wrap(XEKFDAC_fake_script)()
+local function YXDHT_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local button = script.Parent
@@ -1250,8 +1248,8 @@ local function DYPQH_fake_script() -- Main.LocalScript
 		frames.SaverFrame.Visible = false
 	end)
 end
-coroutine.wrap(DYPQH_fake_script)()
-local function MRIKV_fake_script() -- Main2FrameButton.LocalScript 
+coroutine.wrap(YXDHT_fake_script)()
+local function NKRN_fake_script() -- Main2FrameButton.LocalScript 
 	local script = Instance.new('LocalScript', Main2FrameButton)
 
 	local button = script.Parent
@@ -1263,8 +1261,8 @@ local function MRIKV_fake_script() -- Main2FrameButton.LocalScript
 		button2.Visible = true
 	end)
 end
-coroutine.wrap(MRIKV_fake_script)()
-local function QZLQBEZ_fake_script() -- Freeze.LocalScript 
+coroutine.wrap(NKRN_fake_script)()
+local function DBPZTB_fake_script() -- Freeze.LocalScript 
 	local script = Instance.new('LocalScript', Freeze)
 
 	local button = script.Parent
@@ -1283,8 +1281,8 @@ local function QZLQBEZ_fake_script() -- Freeze.LocalScript
 		end
 	end)
 end
-coroutine.wrap(QZLQBEZ_fake_script)()
-local function UEXG_fake_script() -- Dance.LocalScript 
+coroutine.wrap(DBPZTB_fake_script)()
+local function ELRQIUT_fake_script() -- Dance.LocalScript 
 	local script = Instance.new('LocalScript', Dance)
 
 	local button = script.Parent
@@ -1307,8 +1305,8 @@ local function UEXG_fake_script() -- Dance.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UEXG_fake_script)()
-local function CWFLAN_fake_script() -- airlock.LocalScript 
+coroutine.wrap(ELRQIUT_fake_script)()
+local function KYDJ_fake_script() -- airlock.LocalScript 
 	local script = Instance.new('LocalScript', airlock)
 
 	local button = script.Parent
@@ -1329,8 +1327,8 @@ local function CWFLAN_fake_script() -- airlock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(CWFLAN_fake_script)()
-local function UJRRJW_fake_script() -- AutoDrop.LocalScript 
+coroutine.wrap(KYDJ_fake_script)()
+local function VOBTU_fake_script() -- AutoDrop.LocalScript 
 	local script = Instance.new('LocalScript', AutoDrop)
 
 	local button = script.Parent
@@ -1354,8 +1352,8 @@ local function UJRRJW_fake_script() -- AutoDrop.LocalScript
 		end
 	end)
 end
-coroutine.wrap(UJRRJW_fake_script)()
-local function LDZE_fake_script() -- Block.LocalScript 
+coroutine.wrap(VOBTU_fake_script)()
+local function OJUP_fake_script() -- Block.LocalScript 
 	local script = Instance.new('LocalScript', Block)
 
 	local button = script.Parent
@@ -1374,8 +1372,8 @@ local function LDZE_fake_script() -- Block.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LDZE_fake_script)()
-local function PIHDEGZ_fake_script() -- Godmode.LocalScript 
+coroutine.wrap(OJUP_fake_script)()
+local function CBXSQ_fake_script() -- Godmode.LocalScript 
 	local script = Instance.new('LocalScript', Godmode)
 
 	local button = script.Parent
@@ -1384,8 +1382,8 @@ local function PIHDEGZ_fake_script() -- Godmode.LocalScript
 		game.Workspace.Players.LocalPlayer.BodyEffects.Attacking:Destroy()
 	end)
 end
-coroutine.wrap(PIHDEGZ_fake_script)()
-local function CVUP_fake_script() -- Destroymap.LocalScript 
+coroutine.wrap(CBXSQ_fake_script)()
+local function JSBAZSI_fake_script() -- Destroymap.LocalScript 
 	local script = Instance.new('LocalScript', Destroymap)
 
 	local button = script.Parent
@@ -1394,8 +1392,8 @@ local function CVUP_fake_script() -- Destroymap.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Halloween123456/delete/main/x'))()
 	end)
 end
-coroutine.wrap(CVUP_fake_script)()
-local function TNFFR_fake_script() -- FaithGui.Admin 
+coroutine.wrap(JSBAZSI_fake_script)()
+local function GHEOE_fake_script() -- FaithGui.Admin 
 	local script = Instance.new('LocalScript', FaithGui)
 
 	local player = game.Players.LocalPlayer
@@ -1416,4 +1414,4 @@ local function TNFFR_fake_script() -- FaithGui.Admin
 		script.Parent.FaithFrame.starlogo.Visible = true
 	end
 end
-coroutine.wrap(TNFFR_fake_script)()
+coroutine.wrap(GHEOE_fake_script)()
