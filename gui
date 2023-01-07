@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local FaithGui = Instance.new("ScreenGui")
 local FaithFrame = Instance.new("Frame")
 local Welcome = Instance.new("TextLabel")
@@ -13,7 +8,6 @@ local Fps = Instance.new("TextLabel")
 local discord = Instance.new("TextLabel")
 local SaverFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local number = Instance.new("TextLabel")
 local Frame = Instance.new("Frame")
 local Customer = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
@@ -26,6 +20,7 @@ local Textlabel = Instance.new("TextLabel")
 local Textlabel_2 = Instance.new("TextLabel")
 local CashNeeded = Instance.new("TextLabel")
 local Username = Instance.new("TextLabel")
+local number = Instance.new("TextLabel")
 local TpFrame = Instance.new("Frame")
 local UICorner_5 = Instance.new("UICorner")
 local Admin = Instance.new("TextButton")
@@ -54,7 +49,7 @@ local username = Instance.new("TextBox")
 local UICorner_16 = Instance.new("UICorner")
 local UICorner_17 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
-local number_2 = Instance.new("TextLabel")
+local PlayerCash_2 = Instance.new("TextLabel")
 local tab = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
 local UIListLayout = Instance.new("UIListLayout")
@@ -62,39 +57,40 @@ local Saver = Instance.new("TextButton")
 local Home = Instance.new("TextButton")
 local Tps = Instance.new("TextButton")
 local Main = Instance.new("TextButton")
-local Main2Frame = Instance.new("Frame")
-local UICorner_19 = Instance.new("UICorner")
-local Main2FrameButton = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
-local TextLabel_5 = Instance.new("TextLabel")
-local Freeze = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
-local TextLabel_6 = Instance.new("TextLabel")
-local Dance = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local TextLabel_7 = Instance.new("TextLabel")
-local airlock = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local TextLabel_8 = Instance.new("TextLabel")
-local AutoDrop = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local TextLabel_9 = Instance.new("TextLabel")
-local Block = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-local TextLabel_10 = Instance.new("TextLabel")
-local Godmode = Instance.new("TextButton")
-local UICorner_26 = Instance.new("UICorner")
-local Destroymap = Instance.new("TextButton")
-local UICorner_27 = Instance.new("UICorner")
 local tabbutton2 = Instance.new("ImageButton")
-local UICorner_28 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local Ownerlogo = Instance.new("TextLabel")
 local starlogo = Instance.new("TextLabel")
+local Main2Frame = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local Main2FrameButton = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local Freeze = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local Dance = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local airlock = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local AutoDrop = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local Block = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
+local Godmode = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local Destroymap = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
 
 --Properties:
 
 FaithGui.Name = "FaithGui"
 FaithGui.Parent = game.CoreGui
+FaithGui.Enabled = false
 FaithGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 FaithFrame.Name = "FaithFrame"
@@ -176,17 +172,6 @@ SaverFrame.Size = UDim2.new(0.998000085, 0, 1, 0)
 SaverFrame.Visible = false
 
 UICorner.Parent = SaverFrame
-
-number.Name = "number"
-number.Parent = SaverFrame
-number.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-number.BackgroundTransparency = 1.000
-number.Position = UDim2.new(0.235362053, 0, -0.0248808041, 0)
-number.Size = UDim2.new(0, 190, 0, 50)
-number.Font = Enum.Font.FredokaOne
-number.Text = "Cash Tools"
-number.TextColor3 = Color3.fromRGB(255, 255, 255)
-number.TextSize = 36.000
 
 Frame.Parent = SaverFrame
 Frame.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
@@ -289,6 +274,17 @@ Username.TextColor3 = Color3.fromRGB(255, 255, 255)
 Username.TextScaled = true
 Username.TextSize = 21.000
 Username.TextWrapped = true
+
+number.Name = "number"
+number.Parent = SaverFrame
+number.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+number.BackgroundTransparency = 1.000
+number.Position = UDim2.new(0.235362053, 0, -0.0248808041, 0)
+number.Size = UDim2.new(0, 190, 0, 50)
+number.Font = Enum.Font.FredokaOne
+number.Text = "Cash Tools"
+number.TextColor3 = Color3.fromRGB(255, 255, 255)
+number.TextSize = 36.000
 
 TpFrame.Name = "TpFrame"
 TpFrame.Parent = FaithFrame
@@ -416,10 +412,10 @@ Main2.Parent = CreditsFrame
 Main2.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 Main2.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Main2.BorderSizePixel = 0
-Main2.Position = UDim2.new(0.499618143, 0, 0.644754767, 0)
-Main2.Size = UDim2.new(0, 104, 0, 31)
+Main2.Position = UDim2.new(0.773755014, 0, 0.831827641, 0)
+Main2.Size = UDim2.new(0, 68, 0, 26)
 Main2.Font = Enum.Font.GothamBlack
-Main2.Text = "Main 2"
+Main2.Text = "Next"
 Main2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main2.TextSize = 24.000
 Main2.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
@@ -431,7 +427,7 @@ UICorner_13.Parent = Main2
 TextLabel_3.Parent = Main2
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.Position = UDim2.new(-0.461538464, 0, -1.9032259, 0)
+TextLabel_3.Position = UDim2.new(-0.976000011, 0, -2.2650001, 0)
 TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
 TextLabel_3.Font = Enum.Font.SourceSans
 TextLabel_3.Text = "_"
@@ -443,10 +439,10 @@ Speed.Parent = CreditsFrame
 Speed.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
 Speed.BorderColor3 = Color3.fromRGB(255, 255, 255)
 Speed.BorderSizePixel = 0
-Speed.Position = UDim2.new(0.17084074, 0, 0.646037459, 0)
-Speed.Size = UDim2.new(0, 104, 0, 31)
+Speed.Position = UDim2.new(0.318009019, 0, 0.560084999, 0)
+Speed.Size = UDim2.new(0, 126, 0, 31)
 Speed.Font = Enum.Font.GothamBlack
-Speed.Text = "Bring"
+Speed.Text = "Check Cash"
 Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
 Speed.TextSize = 20.000
 Speed.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
@@ -458,7 +454,7 @@ UICorner_14.Parent = Speed
 Frame_2.Parent = CreditsFrame
 Frame_2.BackgroundColor3 = Color3.fromRGB(121, 121, 121)
 Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_2.Position = UDim2.new(0.151664674, 0, 0.138834506, 0)
+Frame_2.Position = UDim2.new(0.140122071, 0, 0.0276020318, 0)
 Frame_2.Size = UDim2.new(0, 239, 0, 100)
 
 Tp.Name = "Tp"
@@ -496,23 +492,26 @@ UICorner_17.Parent = Frame_2
 TextLabel_4.Parent = CreditsFrame
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.Position = UDim2.new(0.246799409, 0, 0.172279909, 0)
+TextLabel_4.Position = UDim2.new(0.243913755, 0, 0.0509353951, 0)
 TextLabel_4.Size = UDim2.new(0, 168, 0, 16)
 TextLabel_4.Font = Enum.Font.GothamBlack
 TextLabel_4.Text = "@username"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 23.000
 
-number_2.Name = "number"
-number_2.Parent = CreditsFrame
-number_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-number_2.BackgroundTransparency = 1.000
-number_2.Position = UDim2.new(0.0679690987, 0, -0.034891583, 0)
-number_2.Size = UDim2.new(0, 298, 0, 50)
-number_2.Font = Enum.Font.FredokaOne
-number_2.Text = "use this tab on MainAlt for (bring)"
-number_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-number_2.TextSize = 18.000
+PlayerCash_2.Name = "PlayerCash"
+PlayerCash_2.Parent = CreditsFrame
+PlayerCash_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerCash_2.BackgroundTransparency = 1.000
+PlayerCash_2.Position = UDim2.new(0.249090016, 0, 0.739737034, 0)
+PlayerCash_2.Size = UDim2.new(0, 166, 0, 32)
+PlayerCash_2.Visible = false
+PlayerCash_2.Font = Enum.Font.FredokaOne
+PlayerCash_2.Text = "$0"
+PlayerCash_2.TextColor3 = Color3.fromRGB(34, 255, 0)
+PlayerCash_2.TextScaled = true
+PlayerCash_2.TextSize = 14.000
+PlayerCash_2.TextWrapped = true
 
 tab.Name = "tab"
 tab.Parent = FaithFrame
@@ -583,6 +582,41 @@ Main.Text = "Main"
 Main.TextColor3 = Color3.fromRGB(117, 117, 117)
 Main.TextSize = 33.000
 
+tabbutton2.Name = "tabbutton2"
+tabbutton2.Parent = FaithFrame
+tabbutton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tabbutton2.BackgroundTransparency = 1.000
+tabbutton2.ClipsDescendants = true
+tabbutton2.Position = UDim2.new(0.0277297124, 0, 0.0324074067, 0)
+tabbutton2.Size = UDim2.new(0, 26, 0, 25)
+tabbutton2.Image = "rbxassetid://10941683602"
+
+UICorner_19.Parent = FaithFrame
+
+Ownerlogo.Name = "Ownerlogo"
+Ownerlogo.Parent = FaithFrame
+Ownerlogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Ownerlogo.BackgroundTransparency = 1.000
+Ownerlogo.Position = UDim2.new(0.882316232, 0, -0.00249147229, 0)
+Ownerlogo.Size = UDim2.new(0, 40, 0, 32)
+Ownerlogo.Visible = false
+Ownerlogo.Font = Enum.Font.GothamBlack
+Ownerlogo.Text = "👑"
+Ownerlogo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Ownerlogo.TextSize = 22.000
+
+starlogo.Name = "starlogo"
+starlogo.Parent = FaithFrame
+starlogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+starlogo.BackgroundTransparency = 1.000
+starlogo.Position = UDim2.new(0.882316232, 0, -0.00249147229, 0)
+starlogo.Size = UDim2.new(0, 40, 0, 32)
+starlogo.Visible = false
+starlogo.Font = Enum.Font.GothamBlack
+starlogo.Text = "⭐"
+starlogo.TextColor3 = Color3.fromRGB(255, 255, 255)
+starlogo.TextSize = 22.000
+
 Main2Frame.Name = "Main2Frame"
 Main2Frame.Parent = FaithFrame
 Main2Frame.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
@@ -590,7 +624,7 @@ Main2Frame.Position = UDim2.new(-0.000708057778, 0, 0, 0)
 Main2Frame.Size = UDim2.new(0.998000026, 0, 1, 0)
 Main2Frame.Visible = false
 
-UICorner_19.Parent = Main2Frame
+UICorner_20.Parent = Main2Frame
 
 Main2FrameButton.Name = "Main2FrameButton"
 Main2FrameButton.Parent = Main2Frame
@@ -600,14 +634,14 @@ Main2FrameButton.BorderSizePixel = 0
 Main2FrameButton.Position = UDim2.new(0.358492196, 0, 0.785404265, 0)
 Main2FrameButton.Size = UDim2.new(0, 104, 0, 31)
 Main2FrameButton.Font = Enum.Font.GothamBlack
-Main2FrameButton.Text = "Main 2"
+Main2FrameButton.Text = "Back"
 Main2FrameButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 Main2FrameButton.TextSize = 24.000
 Main2FrameButton.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Main2FrameButton.TextStrokeTransparency = 0.000
 Main2FrameButton.TextWrapped = true
 
-UICorner_20.Parent = Main2FrameButton
+UICorner_21.Parent = Main2FrameButton
 
 TextLabel_5.Parent = Main2FrameButton
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -634,7 +668,7 @@ Freeze.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Freeze.TextStrokeTransparency = 0.000
 Freeze.TextWrapped = true
 
-UICorner_21.Parent = Freeze
+UICorner_22.Parent = Freeze
 
 TextLabel_6.Parent = Freeze
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -661,7 +695,7 @@ Dance.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Dance.TextStrokeTransparency = 0.000
 Dance.TextWrapped = true
 
-UICorner_22.Parent = Dance
+UICorner_23.Parent = Dance
 
 TextLabel_7.Parent = Dance
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -688,7 +722,7 @@ airlock.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 airlock.TextStrokeTransparency = 0.000
 airlock.TextWrapped = true
 
-UICorner_23.Parent = airlock
+UICorner_24.Parent = airlock
 
 TextLabel_8.Parent = airlock
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -715,7 +749,7 @@ AutoDrop.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 AutoDrop.TextStrokeTransparency = 0.000
 AutoDrop.TextWrapped = true
 
-UICorner_24.Parent = AutoDrop
+UICorner_25.Parent = AutoDrop
 
 TextLabel_9.Parent = AutoDrop
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -742,7 +776,7 @@ Block.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Block.TextStrokeTransparency = 0.000
 Block.TextWrapped = true
 
-UICorner_25.Parent = Block
+UICorner_26.Parent = Block
 
 TextLabel_10.Parent = Block
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -769,7 +803,7 @@ Godmode.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Godmode.TextStrokeTransparency = 0.000
 Godmode.TextWrapped = true
 
-UICorner_26.Parent = Godmode
+UICorner_27.Parent = Godmode
 
 Destroymap.Name = "Destroymap"
 Destroymap.Parent = Main2Frame
@@ -786,46 +820,11 @@ Destroymap.TextStrokeColor3 = Color3.fromRGB(47, 47, 47)
 Destroymap.TextStrokeTransparency = 0.000
 Destroymap.TextWrapped = true
 
-UICorner_27.Parent = Destroymap
-
-tabbutton2.Name = "tabbutton2"
-tabbutton2.Parent = FaithFrame
-tabbutton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-tabbutton2.BackgroundTransparency = 1.000
-tabbutton2.ClipsDescendants = true
-tabbutton2.Position = UDim2.new(0.0277297124, 0, 0.0324074067, 0)
-tabbutton2.Size = UDim2.new(0, 26, 0, 25)
-tabbutton2.Image = "rbxassetid://10941683602"
-
-UICorner_28.Parent = FaithFrame
-
-Ownerlogo.Name = "Ownerlogo"
-Ownerlogo.Parent = FaithFrame
-Ownerlogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Ownerlogo.BackgroundTransparency = 1.000
-Ownerlogo.Position = UDim2.new(0.882316232, 0, -0.00249147229, 0)
-Ownerlogo.Size = UDim2.new(0, 40, 0, 32)
-Ownerlogo.Visible = false
-Ownerlogo.Font = Enum.Font.GothamBlack
-Ownerlogo.Text = "👑"
-Ownerlogo.TextColor3 = Color3.fromRGB(255, 255, 255)
-Ownerlogo.TextSize = 22.000
-
-starlogo.Name = "starlogo"
-starlogo.Parent = FaithFrame
-starlogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-starlogo.BackgroundTransparency = 1.000
-starlogo.Position = UDim2.new(0.882316232, 0, -0.00249147229, 0)
-starlogo.Size = UDim2.new(0, 40, 0, 32)
-starlogo.Visible = false
-starlogo.Font = Enum.Font.GothamBlack
-starlogo.Text = "⭐"
-starlogo.TextColor3 = Color3.fromRGB(255, 255, 255)
-starlogo.TextSize = 22.000
+UICorner_28.Parent = Destroymap
 
 -- Scripts:
 
-local function OPWX_fake_script() -- PlayerCash.LocalScript 
+local function MGNVSFK_fake_script() -- PlayerCash.LocalScript 
 	local script = Instance.new('LocalScript', PlayerCash)
 
 	local cash = game.Players.LocalPlayer.DataFolder.Currency.Value
@@ -842,8 +841,8 @@ local function OPWX_fake_script() -- PlayerCash.LocalScript
 	end
 	script.Parent.Text = "Cash: "..comma_value(cash)
 end
-coroutine.wrap(OPWX_fake_script)()
-local function EJDKMX_fake_script() -- Fps.LocalScript 
+coroutine.wrap(MGNVSFK_fake_script)()
+local function AYGPWT_fake_script() -- Fps.LocalScript 
 	local script = Instance.new('LocalScript', Fps)
 
 	local RS = game:GetService("RunService")
@@ -858,8 +857,8 @@ local function EJDKMX_fake_script() -- Fps.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(EJDKMX_fake_script)()
-local function YVJMYP_fake_script() -- FaithFrame.script test 
+coroutine.wrap(AYGPWT_fake_script)()
+local function DWARCYH_fake_script() -- FaithFrame.script test 
 	local script = Instance.new('LocalScript', FaithFrame)
 
 	----------------------------------------------------------------------------------------------------------------------------
@@ -964,8 +963,8 @@ local function YVJMYP_fake_script() -- FaithFrame.script test
 	end)
 	----------------------------------------------------------------------------------------------------------------------------
 end
-coroutine.wrap(YVJMYP_fake_script)()
-local function GVTFL_fake_script() -- Frame.LocalScript 
+coroutine.wrap(DWARCYH_fake_script)()
+local function NQDOR_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Username = script.Parent.Customer
@@ -1018,8 +1017,8 @@ local function GVTFL_fake_script() -- Frame.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GVTFL_fake_script)()
-local function PIHKYP_fake_script() -- Admin.LocalScript 
+coroutine.wrap(NQDOR_fake_script)()
+local function GLDZPV_fake_script() -- Admin.LocalScript 
 	local script = Instance.new('LocalScript', Admin)
 
 	local button = script.Parent
@@ -1028,8 +1027,8 @@ local function PIHKYP_fake_script() -- Admin.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-870.610046, -32.6492119, -654.12146, -0.999967456, 6.73676981e-09, 0.00807124563, 7.185605e-09, 1, 5.55801236e-08, -0.00807124563, 5.56363098e-08, -0.999967456)
 	end)
 end
-coroutine.wrap(PIHKYP_fake_script)()
-local function VNIQF_fake_script() -- Court.LocalScript 
+coroutine.wrap(GLDZPV_fake_script)()
+local function XAEZAEO_fake_script() -- Court.LocalScript 
 	local script = Instance.new('LocalScript', Court)
 
 	local button = script.Parent
@@ -1038,8 +1037,8 @@ local function VNIQF_fake_script() -- Court.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-898.074036, 22.0798168, -482.705719, 0.0116940476, -9.68925846e-08, 0.999931633, -3.47399762e-08, 1, 9.73054881e-08, -0.999931633, -3.58754981e-08, 0.0116940476)
 	end)
 end
-coroutine.wrap(VNIQF_fake_script)()
-local function EJGM_fake_script() -- Valut.LocalScript 
+coroutine.wrap(XAEZAEO_fake_script)()
+local function MSOC_fake_script() -- Valut.LocalScript 
 	local script = Instance.new('LocalScript', Valut)
 
 	local button = script.Parent
@@ -1048,8 +1047,8 @@ local function EJGM_fake_script() -- Valut.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-516.680176, 23.1926975, -285.770142, -0.0152463671, 1.09481697e-07, -0.999883771, -3.95787181e-09, 1, 1.09554769e-07, 0.999883771, 5.62772406e-09, -0.0152463671)
 	end)
 end
-coroutine.wrap(EJGM_fake_script)()
-local function IWUPKX_fake_script() -- Cage.LocalScript 
+coroutine.wrap(MSOC_fake_script)()
+local function GZYZLGW_fake_script() -- Cage.LocalScript 
 	local script = Instance.new('LocalScript', Cage)
 
 	local button = script.Parent
@@ -1058,8 +1057,8 @@ local function IWUPKX_fake_script() -- Cage.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-798.375244, -39.6492119, -847.344849, -0.999482393, -4.08137595e-08, 0.0321713239, -4.2784059e-08, 1, -6.05555783e-08, -0.0321713239, -6.1900657e-08, -0.999482393)
 	end)
 end
-coroutine.wrap(IWUPKX_fake_script)()
-local function XLAEBC_fake_script() -- Club.LocalScript 
+coroutine.wrap(GZYZLGW_fake_script)()
+local function RULAGIC_fake_script() -- Club.LocalScript 
 	local script = Instance.new('LocalScript', Club)
 
 	local button = script.Parent
@@ -1068,8 +1067,8 @@ local function XLAEBC_fake_script() -- Club.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-265.931396, 0.0313372314, -338.490204, 0.999943137, -3.41572637e-09, -0.0106624654, 2.60253774e-09, 1, -7.62803509e-08, 0.0106624654, 7.62482628e-08, 0.999943137)
 	end)
 end
-coroutine.wrap(XLAEBC_fake_script)()
-local function IGAXAZ_fake_script() -- Bank.LocalScript 
+coroutine.wrap(RULAGIC_fake_script)()
+local function BYYUFWH_fake_script() -- Bank.LocalScript 
 	local script = Instance.new('LocalScript', Bank)
 
 	local button = script.Parent
@@ -1078,8 +1077,8 @@ local function IGAXAZ_fake_script() -- Bank.LocalScript
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-375.226471, 21.2499943, -346.091797, -0.999974251, 1.13027268e-08, -0.00717510376, 1.06777058e-08, 1, 8.71479884e-08, 0.00717510376, 8.70691323e-08, -0.999974251)
 	end)
 end
-coroutine.wrap(IGAXAZ_fake_script)()
-local function NIAGZ_fake_script() -- Main2.LocalScript 
+coroutine.wrap(BYYUFWH_fake_script)()
+local function CSLW_fake_script() -- Main2.LocalScript 
 	local script = Instance.new('LocalScript', Main2)
 
 	local button = script.Parent
@@ -1090,14 +1089,25 @@ local function NIAGZ_fake_script() -- Main2.LocalScript
 		button2.Visible = false
 	end)
 end
-coroutine.wrap(NIAGZ_fake_script)()
-local function QKFHFV_fake_script() -- Frame_2.LocalScript 
+coroutine.wrap(CSLW_fake_script)()
+local function QZBFO_fake_script() -- Frame_2.LocalScript 
 	local script = Instance.new('LocalScript', Frame_2)
 
 	local button = script.Parent.Tp
 	local Username = script.Parent.username
 	local button2 = script.Parent.Parent.Speed
 	local child
+	--Comma value
+	function comma_value(amount)
+		local formatted = amount
+		while true do  
+			formatted, k = string.gsub(formatted, "^(-?%d+)(%d%d%d)", '%1,%2')
+			if (k==0) then
+				break
+			end
+		end
+		return formatted
+	end
 	
 	local function autofill(arg)
 		for i,v in pairs(game:service"Players":GetChildren()) do
@@ -1121,48 +1131,24 @@ local function QKFHFV_fake_script() -- Frame_2.LocalScript
 	end)
 	
 	button2.MouseButton1Click:Connect(function()
-		if game.Players.LocalPlayer.UserId == getgenv().Alts.MainAlt then
-			local tool = game:GetService("Players").LocalPlayer.Backpack.Combat
-			local character = game.Players.LocalPlayer.Character
-			local humanoid = character:FindFirstChild("Humanoid")
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[getgenv().Settings.Name].Character.HumanoidRootPart.CFrame * CFrame.new(3,0,0)
-			getgenv().SavedPos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-			repeat
-				game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Stand Still', "All")
-				wait()
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = child.Character.HumanoidRootPart.CFrame * CFrame.new(0, 0, 1.5)
-				wait(2)
-				humanoid:EquipTool(tool)
-				tool:Activate()
-				wait(3)
-				humanoid:UnequipTools()
-			until child.Character.BodyEffects["K.O"].Value == true
-			if child.Character.BodyEffects["K.O"].Value == true then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = child.Character.UpperTorso.CFrame
-				wait(0.3)
-				game:GetService("ReplicatedStorage").MainEvent:FireServer("Grabbing", false)
-				wait(2)
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = getgenv().SavedPos
-				wait(2)
-				game:GetService("ReplicatedStorage").MainEvent:FireServer("Grabbing", false)
-			end
-		end
+		script.Parent.Parent.PlayerCash.Visible = true
+		script.Parent.Parent.PlayerCash.Text = comma_value(child.DataFolder.Currency.Value)
 	end)
 end
-coroutine.wrap(QKFHFV_fake_script)()
-local function YPMNNDQ_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(QZBFO_fake_script)()
+local function OZCV_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	
 end
-coroutine.wrap(YPMNNDQ_fake_script)()
-local function LFWTF_fake_script() -- TextLabel_4.LocalScript 
+coroutine.wrap(OZCV_fake_script)()
+local function UWMKMGI_fake_script() -- TextLabel_4.LocalScript 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	
 end
-coroutine.wrap(LFWTF_fake_script)()
-local function BVZP_fake_script() -- Saver.LocalScript 
+coroutine.wrap(UWMKMGI_fake_script)()
+local function OEYN_fake_script() -- Saver.LocalScript 
 	local script = Instance.new('LocalScript', Saver)
 
 	-----------------------------------------------------------------------------------------
@@ -1185,8 +1171,8 @@ local function BVZP_fake_script() -- Saver.LocalScript
 	end)
 	-----------------------------------------------------------------------------------------
 end
-coroutine.wrap(BVZP_fake_script)()
-local function QQPHZFG_fake_script() -- Home.LocalScript 
+coroutine.wrap(OEYN_fake_script)()
+local function IUQAC_fake_script() -- Home.LocalScript 
 	local script = Instance.new('LocalScript', Home)
 
 	local button = script.Parent
@@ -1206,8 +1192,8 @@ local function QQPHZFG_fake_script() -- Home.LocalScript
 		frames.SaverFrame.Visible = false
 	end)
 end
-coroutine.wrap(QQPHZFG_fake_script)()
-local function XEKFDAC_fake_script() -- Tps.LocalScript 
+coroutine.wrap(IUQAC_fake_script)()
+local function ZBSRCQB_fake_script() -- Tps.LocalScript 
 	local script = Instance.new('LocalScript', Tps)
 
 	local button = script.Parent
@@ -1227,8 +1213,8 @@ local function XEKFDAC_fake_script() -- Tps.LocalScript
 		frames.SaverFrame.Visible = true
 	end)
 end
-coroutine.wrap(XEKFDAC_fake_script)()
-local function YXDHT_fake_script() -- Main.LocalScript 
+coroutine.wrap(ZBSRCQB_fake_script)()
+local function IOHLMKF_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local button = script.Parent
@@ -1248,8 +1234,8 @@ local function YXDHT_fake_script() -- Main.LocalScript
 		frames.SaverFrame.Visible = false
 	end)
 end
-coroutine.wrap(YXDHT_fake_script)()
-local function NKRN_fake_script() -- Main2FrameButton.LocalScript 
+coroutine.wrap(IOHLMKF_fake_script)()
+local function XHNBLP_fake_script() -- Main2FrameButton.LocalScript 
 	local script = Instance.new('LocalScript', Main2FrameButton)
 
 	local button = script.Parent
@@ -1261,8 +1247,8 @@ local function NKRN_fake_script() -- Main2FrameButton.LocalScript
 		button2.Visible = true
 	end)
 end
-coroutine.wrap(NKRN_fake_script)()
-local function DBPZTB_fake_script() -- Freeze.LocalScript 
+coroutine.wrap(XHNBLP_fake_script)()
+local function CIEL_fake_script() -- Freeze.LocalScript 
 	local script = Instance.new('LocalScript', Freeze)
 
 	local button = script.Parent
@@ -1281,8 +1267,8 @@ local function DBPZTB_fake_script() -- Freeze.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DBPZTB_fake_script)()
-local function ELRQIUT_fake_script() -- Dance.LocalScript 
+coroutine.wrap(CIEL_fake_script)()
+local function SGUM_fake_script() -- Dance.LocalScript 
 	local script = Instance.new('LocalScript', Dance)
 
 	local button = script.Parent
@@ -1305,8 +1291,8 @@ local function ELRQIUT_fake_script() -- Dance.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ELRQIUT_fake_script)()
-local function KYDJ_fake_script() -- airlock.LocalScript 
+coroutine.wrap(SGUM_fake_script)()
+local function WBIR_fake_script() -- airlock.LocalScript 
 	local script = Instance.new('LocalScript', airlock)
 
 	local button = script.Parent
@@ -1327,8 +1313,8 @@ local function KYDJ_fake_script() -- airlock.LocalScript
 		end
 	end)
 end
-coroutine.wrap(KYDJ_fake_script)()
-local function VOBTU_fake_script() -- AutoDrop.LocalScript 
+coroutine.wrap(WBIR_fake_script)()
+local function PXHX_fake_script() -- AutoDrop.LocalScript 
 	local script = Instance.new('LocalScript', AutoDrop)
 
 	local button = script.Parent
@@ -1352,8 +1338,8 @@ local function VOBTU_fake_script() -- AutoDrop.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VOBTU_fake_script)()
-local function OJUP_fake_script() -- Block.LocalScript 
+coroutine.wrap(PXHX_fake_script)()
+local function DBIW_fake_script() -- Block.LocalScript 
 	local script = Instance.new('LocalScript', Block)
 
 	local button = script.Parent
@@ -1372,8 +1358,8 @@ local function OJUP_fake_script() -- Block.LocalScript
 		end
 	end)
 end
-coroutine.wrap(OJUP_fake_script)()
-local function CBXSQ_fake_script() -- Godmode.LocalScript 
+coroutine.wrap(DBIW_fake_script)()
+local function BQYQF_fake_script() -- Godmode.LocalScript 
 	local script = Instance.new('LocalScript', Godmode)
 
 	local button = script.Parent
@@ -1382,8 +1368,8 @@ local function CBXSQ_fake_script() -- Godmode.LocalScript
 		game.Workspace.Players.LocalPlayer.BodyEffects.Attacking:Destroy()
 	end)
 end
-coroutine.wrap(CBXSQ_fake_script)()
-local function JSBAZSI_fake_script() -- Destroymap.LocalScript 
+coroutine.wrap(BQYQF_fake_script)()
+local function OYHQ_fake_script() -- Destroymap.LocalScript 
 	local script = Instance.new('LocalScript', Destroymap)
 
 	local button = script.Parent
@@ -1392,8 +1378,8 @@ local function JSBAZSI_fake_script() -- Destroymap.LocalScript
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Halloween123456/delete/main/x'))()
 	end)
 end
-coroutine.wrap(JSBAZSI_fake_script)()
-local function GHEOE_fake_script() -- FaithGui.Admin 
+coroutine.wrap(OYHQ_fake_script)()
+local function ANQN_fake_script() -- FaithGui.Admin 
 	local script = Instance.new('LocalScript', FaithGui)
 
 	local player = game.Players.LocalPlayer
@@ -1414,4 +1400,4 @@ local function GHEOE_fake_script() -- FaithGui.Admin
 		script.Parent.FaithFrame.starlogo.Visible = true
 	end
 end
-coroutine.wrap(GHEOE_fake_script)()
+coroutine.wrap(ANQN_fake_script)()
