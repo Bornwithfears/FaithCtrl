@@ -885,7 +885,7 @@ b_a.Message:lower()==getgenv().Settings.Prefix.."advert"then
 if
 game.Players.LocalPlayer.UserId~=getgenv().Settings.Controller then getgenv().say=true
 while getgenv().say==true do
-game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.gg/FaithCtrl',"All")wait(5)end end end end end)
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(getgenv().Settings.Advert,"All")wait(5)end end end end end)
 cc:Connect(function(b_a)
 if
 (game:GetService("Players")[b_a.FromSpeaker].UserId)==getgenv().Settings.Controller then
@@ -1254,6 +1254,4 @@ if
 game.Players.LocalPlayer.UserId~=getgenv().Settings.Controller then setfpscap(getgenv().Settings.FPS)end
 if
 game.Players.LocalPlayer.UserId==getgenv().Settings.Controller then
-loadstring(game:HttpGet('https://raw.githubusercontent.com/FaithCtrl/FaithCtrl/main/gui',true))()elseif
-game.Players.LocalPlayer.UserId==getgenv().Alts.MainAlt then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/FaithCtrl/FaithCtrl/main/gui',true))()end
