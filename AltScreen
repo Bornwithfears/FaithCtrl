@@ -8,9 +8,11 @@ local After = Instance.new("TextLabel")
 local FPS = Instance.new("TextLabel")
 local UserId = Instance.new("TextLabel")
 local Discord = Instance.new("TextLabel")
+
 AltScreen.Name = "AltScreen"
-AltScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AltScreen.Parent = game.CoreGui
 AltScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 AltFrame.Name = "AltFrame"
 AltFrame.Parent = AltScreen
 AltFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -18,6 +20,7 @@ AltFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AltFrame.BorderSizePixel = 0
 AltFrame.Position = UDim2.new(-0.5, 0, -0.49999997, 0)
 AltFrame.Size = UDim2.new(2, 0, 2, 0)
+
 Title.Name = "Title"
 Title.Parent = AltFrame
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -31,6 +34,7 @@ Title.Text = "SOUL CONTROL V2"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 100.000
 Title.TextWrapped = true
+
 Display.Name = "Display"
 Display.Parent = AltFrame
 Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -44,6 +48,7 @@ Display.Text = "DisplayName"
 Display.TextColor3 = Color3.fromRGB(75, 75, 75)
 Display.TextSize = 48.000
 Display.TextWrapped = true
+
 Alt.Name = "Alt"
 Alt.Parent = AltFrame
 Alt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -57,6 +62,7 @@ Alt.Text = "Alt 1"
 Alt.TextColor3 = Color3.fromRGB(75, 75, 75)
 Alt.TextSize = 48.000
 Alt.TextWrapped = true
+
 Before.Name = "Before"
 Before.Parent = AltFrame
 Before.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -70,6 +76,7 @@ Before.Text = "Cash Before $N/A"
 Before.TextColor3 = Color3.fromRGB(75, 75, 75)
 Before.TextSize = 48.000
 Before.TextWrapped = true
+
 After.Name = "After"
 After.Parent = AltFrame
 After.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -83,6 +90,7 @@ After.Text = "Cash After $N/A"
 After.TextColor3 = Color3.fromRGB(75, 75, 75)
 After.TextSize = 48.000
 After.TextWrapped = true
+
 FPS.Name = "FPS"
 FPS.Parent = AltFrame
 FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -96,6 +104,7 @@ FPS.Text = "FPS N/A"
 FPS.TextColor3 = Color3.fromRGB(75, 75, 75)
 FPS.TextSize = 48.000
 FPS.TextWrapped = true
+
 UserId.Name = "UserId"
 UserId.Parent = AltFrame
 UserId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -109,6 +118,7 @@ UserId.Text = "UserID N/A"
 UserId.TextColor3 = Color3.fromRGB(75, 75, 75)
 UserId.TextSize = 48.000
 UserId.TextWrapped = true
+
 Discord.Name = "Discord"
 Discord.Parent = AltFrame
 Discord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -122,7 +132,10 @@ Discord.Text = "discord.gg/D3RJBeWgfE"
 Discord.TextColor3 = Color3.fromRGB(75, 75, 75)
 Discord.TextSize = 48.000
 Discord.TextWrapped = true
-local function CJWXWR_fake_script() -- FPS.LocalScript 
+
+-- Scripts:
+
+local function CDXVD_fake_script() -- FPS.LocalScript 
 	local script = Instance.new('LocalScript', FPS)
 
 	local RS = game:GetService("RunService")
@@ -137,8 +150,8 @@ local function CJWXWR_fake_script() -- FPS.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(CJWXWR_fake_script)()
-local function VQIK_fake_script() -- AltFrame.MainScript 
+coroutine.wrap(CDXVD_fake_script)()
+local function ZOZY_fake_script() -- AltFrame.MainScript 
 	local script = Instance.new('LocalScript', AltFrame)
 
 	local Frame = script.Parent
@@ -156,14 +169,15 @@ local function VQIK_fake_script() -- AltFrame.MainScript
 	for i,alt in next, getgenv().Alts do
 		if game.Players.LocalPlayer.UserId == alt then
 			Frame.Alt.Text = tostring(i)
-			Frame.UserId.Text = "UserId "tostring(game.Players.LocalPlayer.UserId)
+			Frame.UserId.Text = "UserId "..tostring(game.Players.LocalPlayer.UserId)
 		end
 	end
 	Frame.Title.RichText = true
+	Frame.Title.Text = "<b><i>SOUL CONTROL V2</i></b>"
 	Frame.Display.Text = game.Players.LocalPlayer.DisplayName
 	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	while task.wait() do
 		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	end
 end
-coroutine.wrap(VQIK_fake_script)()
+coroutine.wrap(ZOZY_fake_script)()
