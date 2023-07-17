@@ -27,8 +27,8 @@ Title.BorderSizePixel = 0
 Title.Position = UDim2.new(0.356570482, 0, 0.296008855, 0)
 Title.Size = UDim2.new(0, 1073, 0, 93)
 Title.Font = Enum.Font.Unknown
-Title.Text = "<font color=\"rgb(255, 255, 255)\">Soul</font> Control<font color=\"rgb(255, 255, 255)\"> V2</font>"
-Title.TextColor3 = Color3.fromRGB(0, 102, 255)
+Title.Text = "SOUL CONTROL V2"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 100.000
 Title.TextWrapped = true
 Display.Name = "Display"
@@ -37,8 +37,8 @@ Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Display.BackgroundTransparency = 1.000
 Display.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Display.BorderSizePixel = 0
-Display.Position = UDim2.new(0.453258544, 0, 0.446784884, 0)
-Display.Size = UDim2.new(0, 349, 0, 52)
+Display.Position = UDim2.new(0.397702992, 0, 0.450110823, 0)
+Display.Size = UDim2.new(0, 763, 0, 52)
 Display.Font = Enum.Font.SourceSansBold
 Display.Text = "DisplayName"
 Display.TextColor3 = Color3.fromRGB(75, 75, 75)
@@ -50,7 +50,7 @@ Alt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Alt.BackgroundTransparency = 1.000
 Alt.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Alt.BorderSizePixel = 0
-Alt.Position = UDim2.new(0.453258514, 0, 0.410753906, 0)
+Alt.Position = UDim2.new(0.453258514, 0, 0.417960107, 0)
 Alt.Size = UDim2.new(0, 349, 0, 58)
 Alt.Font = Enum.Font.SourceSansBold
 Alt.Text = "Alt 1"
@@ -63,8 +63,8 @@ Before.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Before.BackgroundTransparency = 1.000
 Before.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Before.BorderSizePixel = 0
-Before.Position = UDim2.new(0.453525603, 0, 0.550997853, 0)
-Before.Size = UDim2.new(0, 349, 0, 52)
+Before.Position = UDim2.new(0.403579026, 0, 0.551552176, 0)
+Before.Size = UDim2.new(0, 722, 0, 52)
 Before.Font = Enum.Font.SourceSansBold
 Before.Text = "Cash Before $N/A"
 Before.TextColor3 = Color3.fromRGB(75, 75, 75)
@@ -76,8 +76,8 @@ After.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 After.BackgroundTransparency = 1.000
 After.BorderColor3 = Color3.fromRGB(0, 0, 0)
 After.BorderSizePixel = 0
-After.Position = UDim2.new(0.453258514, 0, 0.585920215, 0)
-After.Size = UDim2.new(0, 349, 0, 52)
+After.Position = UDim2.new(0.377938002, 0, 0.580377042, 0)
+After.Size = UDim2.new(0, 913, 0, 52)
 After.Font = Enum.Font.SourceSansBold
 After.Text = "Cash After $N/A"
 After.TextColor3 = Color3.fromRGB(75, 75, 75)
@@ -102,8 +102,8 @@ UserId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 UserId.BackgroundTransparency = 1.000
 UserId.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UserId.BorderSizePixel = 0
-UserId.Position = UDim2.new(0.453258544, 0, 0.480598658, 0)
-UserId.Size = UDim2.new(0, 349, 0, 52)
+UserId.Position = UDim2.new(0.402777791, 0, 0.482261628, 0)
+UserId.Size = UDim2.new(0, 728, 0, 52)
 UserId.Font = Enum.Font.SourceSansBold
 UserId.Text = "UserID N/A"
 UserId.TextColor3 = Color3.fromRGB(75, 75, 75)
@@ -122,11 +122,10 @@ Discord.Text = "discord.gg/D3RJBeWgfE"
 Discord.TextColor3 = Color3.fromRGB(75, 75, 75)
 Discord.TextSize = 48.000
 Discord.TextWrapped = true
-local function CTXQ_fake_script() -- FPS.LocalScript 
+local function ORAT_fake_script() -- FPS.LocalScript 
 	local script = Instance.new('LocalScript', FPS)
 	local RS = game:GetService("RunService")
 	local frames = 0
-	
 	RS.RenderStepped:Connect(function()
 		frames = frames + 1
 	end)
@@ -136,8 +135,8 @@ local function CTXQ_fake_script() -- FPS.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(CTXQ_fake_script)()
-local function WXFDP_fake_script() -- AltFrame.MainScript 
+coroutine.wrap(ORAT_fake_script)()
+local function OSDBW_fake_script() -- AltFrame.MainScript 
 	local script = Instance.new('LocalScript', AltFrame)
 	local Frame = script.Parent
 	function comma_value(amount)
@@ -163,4 +162,4 @@ local function WXFDP_fake_script() -- AltFrame.MainScript
 		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	end
 end
-coroutine.wrap(WXFDP_fake_script)()
+coroutine.wrap(OSDBW_fake_script)()
