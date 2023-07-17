@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local AltScreen = Instance.new("ScreenGui")
 local AltFrame = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
@@ -13,138 +8,122 @@ local After = Instance.new("TextLabel")
 local FPS = Instance.new("TextLabel")
 local UserId = Instance.new("TextLabel")
 local Discord = Instance.new("TextLabel")
-
---Properties:
-
 AltScreen.Name = "AltScreen"
 AltScreen.Parent = game.CoreGui
 AltScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
 AltFrame.Name = "AltFrame"
 AltFrame.Parent = AltScreen
 AltFrame.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
 AltFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 AltFrame.BorderSizePixel = 0
-AltFrame.Position = UDim2.new(-3.49245965e-09, 0, -0.00110864639, 0)
-AltFrame.Size = UDim2.new(1, 0, 1, 0)
-
+AltFrame.Position = UDim2.new(-0.5, 0, -0.49999997, 0)
+AltFrame.Size = UDim2.new(2, 0, 2, 0)
 Title.Name = "Title"
 Title.Parent = AltFrame
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.342948705, 0, 0.13636364, 0)
-Title.Size = UDim2.new(0, 588, 0, 93)
+Title.Position = UDim2.new(0.356570482, 0, 0.296008855, 0)
+Title.Size = UDim2.new(0, 1073, 0, 93)
 Title.Font = Enum.Font.Unknown
 Title.Text = "<font color=\"rgb(255, 255, 255)\">Soul</font> Control<font color=\"rgb(255, 255, 255)\"> V2</font>"
 Title.TextColor3 = Color3.fromRGB(0, 102, 255)
 Title.TextSize = 100.000
 Title.TextWrapped = true
-
 Display.Name = "Display"
 Display.Parent = AltFrame
 Display.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Display.BackgroundTransparency = 1.000
 Display.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Display.BorderSizePixel = 0
-Display.Position = UDim2.new(0.406517088, 0, 0.490022153, 0)
+Display.Position = UDim2.new(0.453258544, 0, 0.446784884, 0)
 Display.Size = UDim2.new(0, 349, 0, 52)
 Display.Font = Enum.Font.SourceSansBold
 Display.Text = "DisplayName"
 Display.TextColor3 = Color3.fromRGB(75, 75, 75)
 Display.TextSize = 48.000
 Display.TextWrapped = true
-
 Alt.Name = "Alt"
 Alt.Parent = AltFrame
 Alt.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Alt.BackgroundTransparency = 1.000
 Alt.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Alt.BorderSizePixel = 0
-Alt.Position = UDim2.new(0.406517088, 0, 0.36807096, 0)
+Alt.Position = UDim2.new(0.453258514, 0, 0.410753906, 0)
 Alt.Size = UDim2.new(0, 349, 0, 58)
 Alt.Font = Enum.Font.SourceSansBold
 Alt.Text = "Alt 1"
 Alt.TextColor3 = Color3.fromRGB(75, 75, 75)
 Alt.TextSize = 48.000
 Alt.TextWrapped = true
-
 Before.Name = "Before"
 Before.Parent = AltFrame
 Before.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Before.BackgroundTransparency = 1.000
 Before.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Before.BorderSizePixel = 0
-Before.Position = UDim2.new(0.406517088, 0, 0.615299344, 0)
+Before.Position = UDim2.new(0.453525603, 0, 0.550997853, 0)
 Before.Size = UDim2.new(0, 349, 0, 52)
 Before.Font = Enum.Font.SourceSansBold
 Before.Text = "Cash Before $N/A"
 Before.TextColor3 = Color3.fromRGB(75, 75, 75)
 Before.TextSize = 48.000
 Before.TextWrapped = true
-
 After.Name = "After"
 After.Parent = AltFrame
 After.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 After.BackgroundTransparency = 1.000
 After.BorderColor3 = Color3.fromRGB(0, 0, 0)
 After.BorderSizePixel = 0
-After.Position = UDim2.new(0.406517088, 0, 0.672948956, 0)
+After.Position = UDim2.new(0.453258514, 0, 0.585920215, 0)
 After.Size = UDim2.new(0, 349, 0, 52)
 After.Font = Enum.Font.SourceSansBold
 After.Text = "Cash After $N/A"
 After.TextColor3 = Color3.fromRGB(75, 75, 75)
 After.TextSize = 48.000
 After.TextWrapped = true
-
 FPS.Name = "FPS"
 FPS.Parent = AltFrame
 FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FPS.BackgroundTransparency = 1.000
 FPS.BorderColor3 = Color3.fromRGB(0, 0, 0)
 FPS.BorderSizePixel = 0
-FPS.Position = UDim2.new(0.406517088, 0, 0.804877996, 0)
+FPS.Position = UDim2.new(0.453258544, 0, 0.674611926, 0)
 FPS.Size = UDim2.new(0, 349, 0, 52)
 FPS.Font = Enum.Font.SourceSansBold
 FPS.Text = "FPS N/A"
 FPS.TextColor3 = Color3.fromRGB(75, 75, 75)
 FPS.TextSize = 48.000
 FPS.TextWrapped = true
-
 UserId.Name = "UserId"
 UserId.Parent = AltFrame
 UserId.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 UserId.BackgroundTransparency = 1.000
 UserId.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UserId.BorderSizePixel = 0
-UserId.Position = UDim2.new(0.406517088, 0, 0.432372481, 0)
+UserId.Position = UDim2.new(0.453258544, 0, 0.480598658, 0)
 UserId.Size = UDim2.new(0, 349, 0, 52)
 UserId.Font = Enum.Font.SourceSansBold
 UserId.Text = "UserID N/A"
 UserId.TextColor3 = Color3.fromRGB(75, 75, 75)
 UserId.TextSize = 48.000
 UserId.TextWrapped = true
-
 Discord.Name = "Discord"
 Discord.Parent = AltFrame
 Discord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Discord.BackgroundTransparency = 1.000
 Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Discord.BorderSizePixel = 0
-Discord.Position = UDim2.new(0.377670944, 0, 0.239467829, 0)
+Discord.Position = UDim2.new(0.438835472, 0, 0.348115265, 0)
 Discord.Size = UDim2.new(0, 457, 0, 58)
 Discord.Font = Enum.Font.SourceSansBold
 Discord.Text = "discord.gg/D3RJBeWgfE"
 Discord.TextColor3 = Color3.fromRGB(75, 75, 75)
 Discord.TextSize = 48.000
 Discord.TextWrapped = true
-
--- Scripts:
-
-local function ZSQN_fake_script() -- FPS.LocalScript 
+local function CTXQ_fake_script() -- FPS.LocalScript 
 	local script = Instance.new('LocalScript', FPS)
-
 	local RS = game:GetService("RunService")
 	local frames = 0
 	
@@ -157,10 +136,9 @@ local function ZSQN_fake_script() -- FPS.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(ZSQN_fake_script)()
-local function RKDNN_fake_script() -- AltFrame.MainScript 
+coroutine.wrap(CTXQ_fake_script)()
+local function WXFDP_fake_script() -- AltFrame.MainScript 
 	local script = Instance.new('LocalScript', AltFrame)
-
 	local Frame = script.Parent
 	function comma_value(amount)
 		local formatted = amount
@@ -172,19 +150,17 @@ local function RKDNN_fake_script() -- AltFrame.MainScript
 		end
 		return formatted
 	end
-	
 	for i,alt in next, getgenv().Alts do
 		if game.Players.LocalPlayer.UserId == alt then
 			Frame.Alt.Text = tostring(i)
-			Frame.UserId.Text = tostring(game.Players.LocalPlayer.UserId)
+			Frame.UserId.Text = "UserId "tostring(game.Players.LocalPlayer.UserId)
 		end
 	end
 	Frame.Title.RichText = true
-	Frame.Display = game.Players.LocalPlayer.DisplayName
+	Frame.Display.Text = game.Players.LocalPlayer.DisplayName
 	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	while task.wait() do
 		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	end
-	
 end
-coroutine.wrap(RKDNN_fake_script)()
+coroutine.wrap(WXFDP_fake_script)()
