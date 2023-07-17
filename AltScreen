@@ -157,9 +157,9 @@ local function OSDBW_fake_script() -- AltFrame.MainScript
 	end
 	Frame.Title.RichText = true
 	Frame.Display.Text = game.Players.LocalPlayer.DisplayName
-	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
+	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer:WaitForChild("DataFolder").Currency.Value)
 	while task.wait() do
-		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
+		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer:WaitForChild("DataFolder").Currency.Value)
 	end
 end
 coroutine.wrap(OSDBW_fake_script)()
