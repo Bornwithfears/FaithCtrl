@@ -9,7 +9,7 @@ local FPS = Instance.new("TextLabel")
 local UserId = Instance.new("TextLabel")
 local Discord = Instance.new("TextLabel")
 AltScreen.Name = "AltScreen"
-AltScreen.Parent = game.CoreGui
+AltScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 AltScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 AltFrame.Name = "AltFrame"
 AltFrame.Parent = AltScreen
@@ -24,8 +24,8 @@ Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Title.BackgroundTransparency = 1.000
 Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Title.BorderSizePixel = 0
-Title.Position = UDim2.new(0.356570482, 0, 0.296008855, 0)
-Title.Size = UDim2.new(0, 1073, 0, 93)
+Title.Position = UDim2.new(0.252938002, 0, 0.290465623, 0)
+Title.Size = UDim2.new(0, 1849, 0, 93)
 Title.Font = Enum.Font.Unknown
 Title.Text = "SOUL CONTROL V2"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -122,10 +122,12 @@ Discord.Text = "discord.gg/D3RJBeWgfE"
 Discord.TextColor3 = Color3.fromRGB(75, 75, 75)
 Discord.TextSize = 48.000
 Discord.TextWrapped = true
-local function ORAT_fake_script() -- FPS.LocalScript 
+local function CJWXWR_fake_script() -- FPS.LocalScript 
 	local script = Instance.new('LocalScript', FPS)
+
 	local RS = game:GetService("RunService")
 	local frames = 0
+	
 	RS.RenderStepped:Connect(function()
 		frames = frames + 1
 	end)
@@ -135,9 +137,10 @@ local function ORAT_fake_script() -- FPS.LocalScript
 		frames = 0
 	end
 end
-coroutine.wrap(ORAT_fake_script)()
-local function OSDBW_fake_script() -- AltFrame.MainScript 
+coroutine.wrap(CJWXWR_fake_script)()
+local function VQIK_fake_script() -- AltFrame.MainScript 
 	local script = Instance.new('LocalScript', AltFrame)
+
 	local Frame = script.Parent
 	function comma_value(amount)
 		local formatted = amount
@@ -149,6 +152,7 @@ local function OSDBW_fake_script() -- AltFrame.MainScript
 		end
 		return formatted
 	end
+	
 	for i,alt in next, getgenv().Alts do
 		if game.Players.LocalPlayer.UserId == alt then
 			Frame.Alt.Text = tostring(i)
@@ -157,9 +161,9 @@ local function OSDBW_fake_script() -- AltFrame.MainScript
 	end
 	Frame.Title.RichText = true
 	Frame.Display.Text = game.Players.LocalPlayer.DisplayName
-	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer:WaitForChild("DataFolder").Currency.Value)
+	Frame.Before.Text = "Cash Before $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	while task.wait() do
-		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer:WaitForChild("DataFolder").Currency.Value)
+		Frame.After.Text = "Cash After $"..comma_value(game.Players.LocalPlayer.DataFolder.Currency.Value)
 	end
 end
-coroutine.wrap(OSDBW_fake_script)()
+coroutine.wrap(VQIK_fake_script)()
